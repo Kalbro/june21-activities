@@ -15,14 +15,14 @@ application.get('/', (request, response) => {
 
 });
 
-// var users={};
-// var userName = request.body.name;
-// var userEmail = request.body.email;
-// var userBirthday = request.body.birthday;
+// var usersInfo={};
+//     name:usersInfo.name;
+
 
 
 application.post('/', (request, response) => {
-    response.render('login-success');
+    console.log(request.body);
+    response.render('login-success', request.body);
 });
 
 application.listen(3000);
